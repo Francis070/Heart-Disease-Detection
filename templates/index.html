@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Predict if heart disease is present or not.</h1>
+    </div>
+    <!-- <h1>Predict if heart disease is present or not.</h1> -->
+
+    <form action="{{ url_for('predict')}}"method="post"> 
+        <div class="form-row"></div>
+            <div class="col-md-4 mb-3">
+                <label>Age</label>
+                <input type="text" class="form-control is-valid" id="feature_input1" name="age" placeholder="Enter Age" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Sex</label>
+                <input type="text" class="form-control is-valid" id="feature_input2" name="sex" placeholder="Enter Sex" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Chest Pain</label>
+                <input type="text" class="form-control is-valid" id="feature_input3" name="chest_pain" placeholder="Enter CP type" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Resting Blood Pressure</label>
+                <input type="text" class="form-control is-valid" id="feature_input4" name="rbs" placeholder="Enter rbs" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Cholestoral</label>
+                <input type="text" class="form-control is-valid" id="feature_input5" name="cholestoral" placeholder="Enter cholestoral" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Fasting Blood Sugar</label>
+                <input type="text" class="form-control is-valid" id="feature_input6" name="fbs" placeholder="Enter fbs" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Resting ECG</label>
+                <input type="text" class="form-control is-valid" id="feature_input7" name="r_ecg" placeholder="Enter r_ecg" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Max Pulse</label>
+                <input type="text" class="form-control is-valid" id="feature_input8" name="pulse" placeholder="Enter max pulse" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Angina</label>
+                <input type="text" class="form-control is-valid" id="feature_input9" name="angina" placeholder="Enter angina" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Old Peak</label>
+                <input type="text" class="form-control is-valid" id="feature_input10" name="oldpeak" placeholder="Enter oldpeak" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Slope</label>
+                <input type="text" class="form-control is-valid" id="feature_input11" name="slope" placeholder="Enter slope" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Major Vessles</label>
+                <input type="text" class="form-control is-valid" id="feature_input12" name="maj_vessel" placeholder="Enter major vessel type" required>
+            </div><br>
+            <div class="col-md-4 mb-3">
+                <label>Thal</label>
+                <input type="text" class="form-control is-valid" id="feature_input13" name="thal" placeholder="Enter Thal" required>
+            </div><br>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+    <br><br>
+    <div align = 'center'>
+        {{prediction_text}}
+    </div>
+    
+    
+</body>
+</html>
